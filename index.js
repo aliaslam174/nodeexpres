@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port =  3000;
+const mongoose=require('mongoose')
 
 // Define a route
 app.get('/', (req, res) => {
@@ -8,6 +9,9 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+mongoose.connect('mongodb://127.0.0.1:27017/blog').then(()=>{
+    app.listen(port,()=>{
+        console.log(`server is listen ${port}`)
+    })
+
+})
