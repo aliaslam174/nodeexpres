@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-mongoose.connect('mongodb://127.0.0.1:27017/blog').then(()=>{
+mongoose.connect('mongodb+srv://aliaslam22246:4YqMspL89JWB9k50@cluster0.ia8nqr9.mongodb.net/blog').then(()=>{
     app.listen(port,()=>{
         console.log(`server is listen ${port}`)
     })
