@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
-const port =  3000;
 const mongoose=require('mongoose')
+
+const port =  3000;
 
 // Define a route
 app.get('/', (req, res) => {
