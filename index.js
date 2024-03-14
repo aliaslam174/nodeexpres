@@ -5,7 +5,7 @@ const mongoose=require('mongoose')
 const port =  3000;
 
 // Define a route
-app.get('/app', (req, res) => {
+app.get('/', (req, res) => {
   res.send('my nodeexpress project!');
 });
 
